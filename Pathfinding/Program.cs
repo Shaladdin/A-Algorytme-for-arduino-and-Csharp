@@ -133,10 +133,10 @@ namespace Pathfinding
             { return getCost(node, startPosition); }
             int getHCost(Vector2 node)
             { return getCost(node, endPosition); }
-            int calculateGCost(Vector2 node)
+            int calculateGCost(Node node)
             {
-                Vector2 parent = node + nodes[node.y, node.x].parentDirection;
-                int move = node.x == 0 || node.y == 0 ? 10 : 14;
+                Vector2 parent = node.position + node.parentDirection;
+                int move = node.parentDirection.x == 0 || node.parentDirection.y == 0 ? 10 : 14;
                 return nodes[parent.y, parent.x].Gcost + move;
             }
 
@@ -146,18 +146,25 @@ namespace Pathfinding
                 {
                     for (int y = -1; y <= 1; y++)
                     {
-                        Vector2 pos = new Vector2(node.x + x, node.y + y);
+                        Vector2 pos = new Vector2(node.x + x, node.y + y) * -1;
                         bool legal = !(pos.x == 0 && pos.y == 0) && pos >= 0 && pos < mapLength;
                         if (legal)
                         {
                             switch (nodes[pos.y, pos.x].nodeType)
                             {
                                 case Node.type.empety:
-                                    nodes[pos.y, pos.x] = new Node(0, getHCost(pos), pos, new Vector2(x, y), Node.type.normal);
-                                    nodes[pos.y, pos.x].Gcost = calculateGCost(pos);
+                                    nodes[pos.y, pos.x] = new Node(0, getHCost(pos), pos, new Vector2(x, y) * -1, Node.type.normal);
+                                    nodes[pos.y, pos.x].Gcost = calculateGCost(nodes[pos.y, pos.x]);
                                     break;
                                 case Node.type.normal:
-                                    // int i =  MathF.Min(nodes[pos.y, pos.x].Fcost,)
+                                    Node g = new Node(0, getHCost(pos), pos, new Vector2(x, y) * -1, Node.type.normal);
+                                    int j = calculateGCost(g);
+                                    g.Gcost = j;
+                                    int i = Math.Min(nodes[pos.y, pos.x].Fcost, j);
+                                    if (i == nodes[pos.y, pos.x].Fcost)
+                                        break;
+                                    else
+                                        nodes[pos.y, pos.x] = g;
                                     break;
                                 case Node.type.end:
                                     done = true;
@@ -215,6 +222,7 @@ namespace Pathfinding
                     if (!somthingEvaluated)
                         evaluate(target);
                 }
+                
             }
         }
     }
