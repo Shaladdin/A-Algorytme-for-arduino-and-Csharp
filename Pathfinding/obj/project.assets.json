@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ABY ganteng\\VS\\Algorytme\\Pathfinding\\Pathfinding.csproj",
+      "projectUniqueName": "C:\\Users\\ABY ganteng\\GitHub\\A-Algorytme-for-arduino-and-Csharp\\Pathfinding\\Pathfinding.csproj",
       "projectName": "Pathfinding",
-      "projectPath": "C:\\Users\\ABY ganteng\\VS\\Algorytme\\Pathfinding\\Pathfinding.csproj",
+      "projectPath": "C:\\Users\\ABY ganteng\\GitHub\\A-Algorytme-for-arduino-and-Csharp\\Pathfinding\\Pathfinding.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ABY ganteng\\VS\\Algorytme\\Pathfinding\\obj\\",
+      "outputPath": "C:\\Users\\ABY ganteng\\GitHub\\A-Algorytme-for-arduino-and-Csharp\\Pathfinding\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config"
