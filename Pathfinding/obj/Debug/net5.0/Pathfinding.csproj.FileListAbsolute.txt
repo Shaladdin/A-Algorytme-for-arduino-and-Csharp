@@ -1,0 +1,16 @@
+C:\Users\ABY ganteng\VS\Algorytme\Pathfinding\bin\Debug\net5.0\Pathfinding.exe
+C:\Users\ABY ganteng\VS\Algorytme\Pathfinding\bin\Debug\net5.0\Pathfinding.deps.json
+C:\Users\ABY ganteng\VS\Algorytme\Pathfinding\bin\Debug\net5.0\Pathfinding.runtimeconfig.json
+C:\Users\ABY ganteng\VS\Algorytme\Pathfinding\bin\Debug\net5.0\Pathfinding.runtimeconfig.dev.json
+C:\Users\ABY ganteng\VS\Algorytme\Pathfinding\bin\Debug\net5.0\Pathfinding.dll
+C:\Users\ABY ganteng\VS\Algorytme\Pathfinding\bin\Debug\net5.0\ref\Pathfinding.dll
+C:\Users\ABY ganteng\VS\Algorytme\Pathfinding\bin\Debug\net5.0\Pathfinding.pdb
+C:\Users\ABY ganteng\VS\Algorytme\Pathfinding\obj\Debug\net5.0\Pathfinding.csproj.AssemblyReference.cache
+C:\Users\ABY ganteng\VS\Algorytme\Pathfinding\obj\Debug\net5.0\Pathfinding.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ABY ganteng\VS\Algorytme\Pathfinding\obj\Debug\net5.0\Pathfinding.AssemblyInfoInputs.cache
+C:\Users\ABY ganteng\VS\Algorytme\Pathfinding\obj\Debug\net5.0\Pathfinding.AssemblyInfo.cs
+C:\Users\ABY ganteng\VS\Algorytme\Pathfinding\obj\Debug\net5.0\Pathfinding.csproj.CoreCompileInputs.cache
+C:\Users\ABY ganteng\VS\Algorytme\Pathfinding\obj\Debug\net5.0\Pathfinding.dll
+C:\Users\ABY ganteng\VS\Algorytme\Pathfinding\obj\Debug\net5.0\ref\Pathfinding.dll
+C:\Users\ABY ganteng\VS\Algorytme\Pathfinding\obj\Debug\net5.0\Pathfinding.pdb
+C:\Users\ABY ganteng\VS\Algorytme\Pathfinding\obj\Debug\net5.0\Pathfinding.genruntimeconfig.cache
