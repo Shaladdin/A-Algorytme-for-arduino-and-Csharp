@@ -157,14 +157,17 @@ namespace Pathfinding
                                     nodes[pos.y, pos.x].Gcost = calculateGCost(nodes[pos.y, pos.x]);
                                     break;
                                 case Node.type.normal:
-                                    Node g = new Node(0, getHCost(pos), pos, new Vector2(x, y) * -1, Node.type.normal);
-                                    int j = calculateGCost(g);
-                                    g.Gcost = j;
-                                    int i = Math.Min(nodes[pos.y, pos.x].Fcost, j);
-                                    if (i == nodes[pos.y, pos.x].Fcost)
-                                        break;
+                                    if (nodes[pos.y, pos.x].evaluated)
+                                    {
+                                        Node g = new Node(0, getHCost(pos), pos, new Vector2(x, y) * -1, Node.type.normal);
+                                        int j = calculateGCost(g);
+                                        g.Gcost = j;
+                                        int i = Math.Min(nodes[pos.y, pos.x].Fcost, j);
+                                        if (i != nodes[pos.y, pos.x].Fcost)
+                                            nodes[pos.y, pos.x] = g;
+                                    }
                                     else
-                                        nodes[pos.y, pos.x] = g;
+                                        Console.WriteLine("bruh");
                                     break;
                                 case Node.type.end:
                                     done = true;
@@ -208,7 +211,7 @@ namespace Pathfinding
                     {
                         for (int y = 0; y < mapLength.y; y++)
                         {
-                            if (nodes[y, x].Fcost == smallestFcost && nodes[y, x].Gcost == smallestGcost && nodes[y, x].nodeType != Node.type.end && nodes[y, x].nodeType != Node.type.wall)
+                            if ((nodes[y, x].nodeType == Node.type.normal || nodes[y, x].nodeType == Node.type.start) && nodes[y, x].Fcost == smallestFcost && nodes[y, x].Gcost == smallestGcost)
                             {
                                 target = nodes[y, x].position;
                                 if (nodes[y, x].Hcost == smallestHcost)
@@ -222,7 +225,7 @@ namespace Pathfinding
                     if (!somthingEvaluated)
                         evaluate(target);
                 }
-                
+                Console.WriteLine("Done");
             }
         }
     }
